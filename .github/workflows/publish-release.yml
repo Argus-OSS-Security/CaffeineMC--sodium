@@ -4,24 +4,25 @@ name: Release on Platforms
 permissions:
   contents: write # Needed to publish a GitHub release
 
-on:
-  workflow_dispatch:
-    inputs:
-      platform:
-        type: choice
-        description: Platform
-        options:
-          - both
-          - fabric
-          - neoforge
-      destination:
-        type: choice
-        description: Destination
-        options:
-          - GH+MR+CF
-          - GH+MR
-          - GH
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       platform:
+#         type: choice
+#         description: Platform
+#         options:
+#           - both
+#           - fabric
+#           - neoforge
+#       destination:
+#         type: choice
+#         description: Destination
+#         options:
+#           - GH+MR+CF
+#           - GH+MR
+#           - GH
+# 
 jobs:
   build:
     runs-on: ubuntu-latest

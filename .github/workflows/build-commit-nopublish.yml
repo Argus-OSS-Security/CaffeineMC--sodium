@@ -2,11 +2,12 @@
 # This makes use of caching for faster builds and uploads the resulting artifacts
 name: build-commit-nopublish
 
-on:
-  push:
-    branches-ignore:
-      - dev
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches-ignore:
+#       - dev
+# 
 jobs:
   build:
     runs-on: ubuntu-latest

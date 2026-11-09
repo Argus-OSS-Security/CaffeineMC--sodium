@@ -2,7 +2,8 @@
 # This is primarily for when we manually need to publish a release because for some reason publishing broke
 name: Release CaffeineMC Maven
 
-on: [ workflow_dispatch ]
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on: [ workflow_dispatch ]
 
 jobs:
   build:
